@@ -1,0 +1,3 @@
+package kt
+
+class Main
