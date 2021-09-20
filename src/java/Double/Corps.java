@@ -12,5 +12,9 @@ public class Corps {
     public double[] getParam() {
         return param;
     }
+
+    public void setParam(double[] param) {
+        this.param = param;
+    }
 }
 
