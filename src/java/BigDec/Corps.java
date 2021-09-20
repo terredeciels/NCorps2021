@@ -1,11 +1,11 @@
-package java;
+package java.BigDec;
 
 import java.math.BigDecimal;
 
 public class Corps {
 
 
-   private BigDecimal[] param = new BigDecimal[6];
+    private BigDecimal[] param = new BigDecimal[6];
 
     public Corps(BigDecimal[] param) {
         this.param = param;
