@@ -1,12 +1,12 @@
-package java.Double;
+package jvm.dble;
 
 public class Corps {
 
 
-    private double[] param = new double[6];
+    private double[] param;
 
-    public Corps(double[] param) {
-        this.param = param;
+    public Corps() {
+        this.param = new double[6];
     }
 
     public double[] getParam() {

@@ -1,4 +1,4 @@
-package java.BigDec;
+package jvm.BigDec;
 
 public class Colisions {
 }

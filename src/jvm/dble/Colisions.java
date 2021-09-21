@@ -1,4 +1,4 @@
-package java.Double;
+package jvm.dble;
 
 public class Colisions {
 }

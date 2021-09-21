@@ -1,4 +1,4 @@
-package java.Double;
+package jvm.dble;
 
 public class Initialisation {
 
@@ -16,12 +16,14 @@ public class Initialisation {
         NCorpsT0 = new Corps[nbDeCorps][Tmax];
 
         for (int n = 0; n < nbDeCorps; n++) {
+            Corps corps = new Corps();
             double[] param = new double[6];
             for (int c = 0; c < 6; c++) {
                 param[c] = Math.random();// 0 a 1 ?
+                //System.out.print(param[c]);
                 //preciser les domaines
             }
-            Corps corps = new Corps(param);
+            corps.setParam(param);
             NCorpsT0[n][0] = corps;
         }
 
@@ -50,4 +52,6 @@ public class Initialisation {
     public void calculate() {
         new Calcul(this);
     }
+
+
 }

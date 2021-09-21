@@ -1,23 +1,18 @@
-package java.Double;
+package jvm.dble;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
 public class Calcul {
 
-    private final Corps[][] ncorps;
-
-    public Corps[][] getNcorps() {
-        return ncorps;
-    }
 
     public Calcul(Initialisation init) {
         double Gm = init.getGm();
-        ncorps = init.getNCorpsT0();
+        Corps[][] ncorps = init.getNCorpsT0();
         int nbcorps = init.getNbDeCorps();
         double pas = init.getPas();
 
-        for (int k = 0; k < init.getTmax(); k++) {
+        for (int k = 0; k < init.getTmax() - 1; k++) {
             for (int n = 0; n < nbcorps; n++) { //corps n
                 double fx = 0.0;
                 double fy = 0.0;
@@ -44,7 +39,9 @@ public class Calcul {
                         param[4] = fy * ((k + 1) * pas) + ncorps[n][k].getParam()[4];
                         param[5] = fz * ((k + 1) * pas) + ncorps[n][k].getParam()[5];
 
-                        ncorps[n][k + 1].setParam(param);
+                        Corps corps = new Corps();
+                        corps.setParam(param);
+                        ncorps[n][k + 1] = corps;
 
                     }
                 }
