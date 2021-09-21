@@ -7,8 +7,10 @@ public class Initialisation {
     private final int nbDeCorps;
     private final int Tmax;
     private final double pas;
+    private final int DimXYZ;
 
-    public Initialisation(double gm, int nbdecorps, int tmax, double p) {
+    public Initialisation(double gm, int nbdecorps, int tmax, double p, int dimXYZ) {
+        DimXYZ=dimXYZ;
         Gm = gm;
         pas = p;
         Tmax = tmax;
@@ -19,7 +21,7 @@ public class Initialisation {
             Corps corps = new Corps();
             double[] param = new double[6];
             for (int c = 0; c < 6; c++) {
-                param[c] = Math.random();// 0 a 1 ?
+                param[c] = Math.random()*DimXYZ;// 0 a 1 ?
                 //System.out.print(param[c]);
                 //preciser les domaines
             }
