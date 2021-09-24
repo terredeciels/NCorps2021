@@ -30,8 +30,10 @@ public class Launch {
         boolean[][] coord= new boolean[DimXYZ][DimXYZ];
         for (int n = 0; n < init.getNbDeCorps(); n++) {
             double[] param = I[n][0].getParam();
-            int X = (int) (param[0] / param[2]);
-            int Y = (int) (param[1] / param[2]);
+//            int X = (int) (param[0] / param[2]);
+//            int Y = (int) (param[1] / param[2]);
+            int X = (int) (param[0] );
+            int Y = (int) (param[1] );
             System.out.print(X);
             System.out.print(" ; ");
             System.out.print(Y);
